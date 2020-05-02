@@ -9,7 +9,7 @@ const parseTitle = (options) => (tree) => {
     tree,
     (node) => node.type === 'code',
     (node, index, parent) => {
-      const [lang, title] = split(node.lang, ':');
+      const [lang, title] = split(node.lang || '', ':');
       if (title || title === '') {
         node.lang = lang;
         const titleNode = {
