@@ -17,7 +17,6 @@ const parseTitle = (options) => (tree) => {
           value: `<div className="code-title">${title}</div>`,
         };
         parent.children.splice(index, 0, titleNode);
-        console.log(node);
       }
     }
   );
