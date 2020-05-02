@@ -1,4 +1,4 @@
-# Code title plugin
+# Code title plugin for Inkdrop
 
 Add a title to fenced code blocks.
 
@@ -7,3 +7,7 @@ Add a title to fenced code blocks.
 ```
 ipm install code-title
 ```
+
+## Example
+
+![example](./img/demo.gif)
