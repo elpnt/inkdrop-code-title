@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    ".CodeMirror": [
+      {
+        "label": "Toggle code-title",
+        "command": "code-title:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Plugins",
+      "submenu": [
+        {
+          "label": "code-title",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "code-title:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

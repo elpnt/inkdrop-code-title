@@ -1,0 +1,13 @@
+{
+  "name": "code-title",
+  "main": "./lib/code-title",
+  "version": "0.0.0",
+  "description": "Add a title to fenced code blocks.",
+  "keywords": [],
+  "repository": "https://github.com/elpnt/inkdrop-code-title",
+  "license": "MIT",
+  "engines": {
+    "inkdrop": "^4.x"
+  },
+  "dependencies": {}
+}
