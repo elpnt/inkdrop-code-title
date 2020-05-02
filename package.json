@@ -1,6 +1,6 @@
 {
   "name": "code-title",
-  "main": "./lib/code-title",
+  "main": "./lib/index",
   "version": "0.0.0",
   "description": "Add a title to fenced code blocks.",
   "keywords": [],
@@ -12,7 +12,11 @@
   "engines": {
     "inkdrop": "^4.x"
   },
-  "dependencies": {},
+  "dependencies": {
+    "query-string": "^6.12.1",
+    "split-on-first": "^2.0.0",
+    "unist-util-visit": "^2.0.2"
+  },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
@@ -26,7 +30,9 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "^7.19.0",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "prettier": {
     "singleQuote": true
