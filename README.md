@@ -10,6 +10,7 @@ ipm install code-title
 
 ## Usage & Example
 
-Add `:title` following `lang` property of a fenced code block.
+Type a colon and a title (such as `:your-title`) after the `language` tag in the
+fenced code block.
 
 ![example](./img/demo.gif)
