@@ -13,6 +13,7 @@
     "inkdrop": "^4.x"
   },
   "dependencies": {
+    "lodash": "^4.17.19",
     "split-on-first": "^2.0.0",
     "unist-util-visit": "^2.0.2"
   },
