@@ -1,6 +1,6 @@
 # Code title plugin for Inkdrop
 
-Add a title to fenced code blocks.
+Add a title to a fenced code block.
 
 ## Install
 
@@ -10,7 +10,12 @@ ipm install code-title
 
 ## Usage & Example
 
-Type a colon and a title (such as `:your-title`) after the `language` tag in the
-fenced code block.
+Type a colon and a title after the `language` tag in the fenced code block.
 
-![example](./img/demo.gif)
+### Default Light Theme
+
+![example-light](./img/light.png)
+
+### Default Dark Theme
+
+![example-dark](./img/dark.png)
