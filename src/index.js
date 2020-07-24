@@ -4,14 +4,18 @@ import visit from 'unist-util-visit';
 import split from 'split-on-first';
 import { markdownRenderer } from 'inkdrop';
 
+const Entities = require('html-entities').AllHtmlEntities;
+const entities = new Entities();
+
 const parseTitle = (options) => (tree) => {
   visit(
     tree,
     (node) => node.type === 'code',
     (node, index, parent) => {
-      const [lang, title] = split(node.lang || '', ':');
+      let [lang, title] = split(node.lang || '', ':');
       if (title || title === '') {
         node.lang = lang;
+        title = entities.encode(title);
         const titleNode = {
           type: 'html',
           value: `<div className="code-title">${title}</div>`,
