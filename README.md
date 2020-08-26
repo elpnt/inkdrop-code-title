@@ -10,12 +10,11 @@ ipm install code-title
 
 ## Usage & Example
 
-Type a colon and a title after the `language` tag in the fenced code block.
+Type a colon(`:`) and a title after the `language` tag in a fenced code block as follows.
 
-### Default Light Theme
+![code-title example image](./img/light.png)
 
-![example-light](./img/light.png)
+## CHANGELOG
 
-### Default Dark Theme
-
-![example-dark](./img/dark.png)
+0.4.0
+  - allow spaces in a title
