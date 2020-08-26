@@ -16,5 +16,5 @@ Type a colon(`:`) and a title after the `language` tag in a fenced code block as
 
 ## CHANGELOG
 
-0.4.0
+- 0.4.0
   - allow spaces in a title
