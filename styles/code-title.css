@@ -1,6 +1,6 @@
 .code-title {
   color: var(--full-black);
-  background-color: var(--mid-white);
+  background-color: rgba(120, 120, 120, 0.3);
   font-size: var(--small);
   padding: 0.1em 0.3em;
   border-radius: 3px;
