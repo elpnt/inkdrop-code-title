@@ -14,9 +14,19 @@ ipm install code-title
 
 Type a colon(`:`) and a title after a `language` tag in a fenced code block as follows.
 
-![code-title example image](./img/light.png)
+**Default Light Theme**
+![code-title light image](./img/light.png)
+
+**Default Dark Theme**
+![code-title dark image](./img/dark.png)
+
+**Nord**
+![code-title nord image](./img/nord.png)
 
 ## CHANGELOG
+
+- 1.1.0
+  - improve color contrast
 
 - 1.0.0
   - stable release

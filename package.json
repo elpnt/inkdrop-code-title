@@ -7,7 +7,8 @@
   "repository": "https://github.com/elpnt/inkdrop-code-title",
   "license": "MIT",
   "scripts": {
-    "build": "babel src/ -d lib/"
+    "build": "babel src/ -d lib/",
+    "watch": "babel -w src/ -d lib/"
   },
   "engines": {
     "inkdrop": "^4.x"
