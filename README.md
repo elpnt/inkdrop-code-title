@@ -14,14 +14,17 @@ ipm install code-title
 
 Type a colon(`:`) and a title after a `language` tag in a fenced code block as follows.
 
-**Default Light Theme**
+**Default Light**
 ![code-title light image](./img/light.png)
 
-**Default Dark Theme**
+**Default Dark**
 ![code-title dark image](./img/dark.png)
 
 **Nord**
 ![code-title nord image](./img/nord.png)
+
+**Iceberg**
+![code-title iceberg image](./img/iceberg.png)
 
 ## CHANGELOG
 
