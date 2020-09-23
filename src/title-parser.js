@@ -31,13 +31,14 @@ const parseTitle = (options) => (tree) => {
     (node) => node.type === 'code',
     (node, index, parent) => {
       let [lang, title] = split(node.lang || '', ':');
-      let meta = node.meta || '';
+      const meta = node.meta || '';
       if (title || title === '') {
         node.lang = lang;
-        title = entities.encode(title + ' ' + meta);
+        if (meta) title += ' ' + meta;
+        title = entities.encode(title);
         const titleNode = {
           type: 'html',
-          value: `<div className="code-title">${title}</div>`,
+          value: `<div class="code-title">${title}</div>`,
         };
         parent.children.splice(index, 0, titleNode);
       }
