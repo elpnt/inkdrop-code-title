@@ -1,0 +1,40 @@
+// -------------
+//   title tag
+// -------------
+.code-title {
+  color: var(--text-color);
+  background-color: rgba(120, 120, 120, 0.25);
+  font-size: 1em;
+  padding: 0 0.4em;
+  height: 20px;
+  display: inline-block;
+}
+
+.code-title.top {
+  border-radius: 3px;
+}
+
+.code-title.inside {
+  border-radius: 3px 0 3px 0;
+  margin-bottom: -20px;
+  display: table;
+  position: relative;
+  z-index: 2;
+}
+
+// --------------
+//   code block
+// --------------
+.with-title-top {
+  padding-top: auto;
+  font-size: 1em;
+}
+
+.with-title-inside {
+  padding-top: 20px;
+  font-size: 1em;
+}
+
+pre > div > code {
+  font-size: 1em !important;
+}
