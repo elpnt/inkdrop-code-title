@@ -20,16 +20,10 @@ Type a colon(`:`) and a title after a `language` tag in a fenced code block as f
 **Default Dark**
 ![code-title dark image](./img/dark.png)
 
-**Nord**
-![code-title nord image](./img/nord.png)
-
-**Iceberg**
-![code-title iceberg image](./img/iceberg.png)
-
 ### Title Position
 You can choose the position of titles in the plugin settings.
 
-**Inside the code block (default)**
+**Inside of the code block (default)**
 ![inside](./img/inside.png)
 
 **On top of the code block**
