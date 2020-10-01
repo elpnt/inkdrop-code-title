@@ -15,29 +15,21 @@ ipm install code-title
 Type a colon(`:`) and a title after a `language` tag in a fenced code block as follows.
 
 **Default Light**
+
 ![code-title light image](./img/light.png)
 
 **Default Dark**
+
 ![code-title dark image](./img/dark.png)
 
 ### Title Position
+
 You can choose the position of titles in the plugin settings.
 
 **Inside of the code block (default)**
+
 ![inside](./img/inside.png)
 
 **On top of the code block**
+
 ![top](./img/top.png)
-
-## CHANGELOG
-- 2.0.0
-  - able to move a title in a code block
-
-- 1.1.0
-  - improve color contrast
-
-- 1.0.0
-  - stable release
-
-- 0.4.0
-  - allow spaces in a title
