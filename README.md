@@ -1,6 +1,6 @@
 # Code Title
-![Inkdrop Plugin Version](https://inkdrop-plugin-badge.vercel.app/api/version/code-title&style=flat)
-![Inkdrop Plugin Downloads](https://inkdrop-plugin-badge.vercel.app/api/downloads/code-title&style=flat)
+![Inkdrop Plugin Version](https://inkdrop-plugin-badge.vercel.app/api/version/code-title?style=flat)
+![Inkdrop Plugin Downloads](https://inkdrop-plugin-badge.vercel.app/api/downloads/code-title?style=flat)
 
 Add a title to a fenced code block
 
