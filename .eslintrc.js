@@ -9,4 +9,7 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
   },
+  rules: {
+    'react/prop-types': 0
+  }
 };

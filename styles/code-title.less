@@ -4,38 +4,35 @@
 .code-title {
   color: var(--text-color);
   background-color: rgba(120, 120, 120, 0.25);
-  font-size: 1em;
-  padding: 0 0.4em;
-  height: 20px;
-  line-height: 20px;
+  font-size: 100%;
+  padding: 0 0.4rem;
   display: inline-block;
-}
-
-.code-title.top {
-  border-radius: 3px;
-}
-
-.code-title.inside {
+  height: 1.6rem;
+  line-height: auto;
   border-radius: 3px 0 3px 0;
-  margin-bottom: -20px;
+  margin-bottom: -1.6rem;
   display: table;
   position: relative;
   z-index: 2;
 }
 
+.code-title > * {
+  background: none !important;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.code-title > code:before, code:after {
+  letter-spacing: -2rem !important;
+}
+
 // --------------
 //   code block
 // --------------
-.with-title-top {
-  padding-top: auto;
-  font-size: 1em;
-}
-
-.with-title-inside {
-  padding-top: 20px;
-  font-size: 1em;
+.with-title {
+  padding-top: 1.6rem;
 }
 
 pre > div > code {
-  font-size: 1em !important;
+  font-size: 100% !important;
 }
