@@ -25,7 +25,6 @@ import { AllHtmlEntities as Entities } from "html-entities";
 
 const parseTitle = (options) => (tree) => {
   const entities = new Entities();
-  const tag = inkdrop.config.get("code-title.isMonospaced") ? "code" : "span";
 
   visit(
     tree,
@@ -38,13 +37,15 @@ const parseTitle = (options) => (tree) => {
       node.data = node.data || {};
       node.data.hProperties = node.data.hProperties || {};
 
+      console.log(title);
+
       if (title || title === "") {
         node.lang = lang;
         if (meta) title += " " + meta;
         title = entities.encode(title);
         const titleNode = {
           type: "html",
-          value: `<${tag} class="code-title">${title}</${tag}>`,
+          value: `<span class="code-title">${title}</span>`,
         };
         parent.children.splice(index, 0, titleNode);
 

@@ -2,17 +2,11 @@ import React from "react";
 
 export default function createTitledCodeBlock(OrigCode) {
   const Code = (props) => {
-    // e.g.) className: ["language-javascript position"]
     const { className } = props;
-    let splitted = [];
-    let position = "";
-    if (className) {
-      splitted = className.split(" ");
-      position = splitted[0];
-    }
+    const withTitle = className.split(" ")[0] === "with-title";
 
-    return splitted.length ? (
-      <div className={position}>
+    return withTitle ? (
+      <div className="with-title-block">
         <OrigCode {...props}>{props.children}</OrigCode>
       </div>
     ) : (

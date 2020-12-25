@@ -1,0 +1,22 @@
+span.code-title {
+  color: var(--text-color);
+  background-color: rgba(120, 120, 120, 0.25);
+  font-size: 0.9em;
+  padding: 0 0.4em;
+  display: inline-block;
+  line-height: 1.6em;
+  border-radius: 3px 0 3px 0;
+  margin-bottom: -1.6em;
+  display: table;
+  position: relative;
+  z-index: 2;
+  vertical-align: center;
+}
+
+div.with-title-block {
+  padding-top: 1.6em;
+}
+
+pre > div > code {
+  font-size: 100% !important;
+}
