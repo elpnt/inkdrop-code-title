@@ -1,7 +1,6 @@
 span.code-title {
   color: var(--text-color);
   background-color: rgba(120, 120, 120, 0.25);
-  font-size: 0.9em;
   padding: 0 0.4em;
   display: inline-block;
   line-height: 1.6em;
