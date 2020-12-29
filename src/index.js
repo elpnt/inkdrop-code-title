@@ -5,15 +5,6 @@ import parseTitle from "./title-parser";
 import createTitledCodeBlock from "./codeblock";
 
 module.exports = {
-  config: {
-    isMonospaced: {
-      title: "Monospaced Font",
-      description: "Use a monospaced font in titles",
-      type: "boolean",
-      default: true,
-    },
-  },
-
   activate() {
     markdownRenderer.remarkPlugins.push(parseTitle);
 
