@@ -37,11 +37,10 @@ const parseTitle = (options) => (tree) => {
       node.data = node.data || {};
       node.data.hProperties = node.data.hProperties || {};
 
-      console.log(title);
-
       if (title || title === "") {
         node.lang = lang;
         if (meta) title += " " + meta;
+        if (title === "") return; // if no title, don't render it
         title = entities.encode(title);
         const titleNode = {
           type: "html",
