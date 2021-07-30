@@ -9,11 +9,11 @@
   "scripts": {
     "build": "babel src/ -d lib/",
     "watch": "babel -w src/ -d lib/",
-    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
     "lint:eslint": "eslint --format codeframe 'src/**'",
     "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.{less,yml,json}'",
-    "fix": "yarn fix:eslint && yarn fix:prettier",
-    "fix:eslint": "yarn lint:eslint --fix",
+    "fix": "npm run fix:eslint && npm run fix:prettier",
+    "fix:eslint": "npm run lint:eslint --fix",
     "fix:prettier": "prettier --write --ignore-path .gitignore '**/*.{less,yml,json}'"
   },
   "engines": {
