@@ -1,0 +1,14 @@
+{
+  "jsc": {
+    "parser": {
+      "syntax": "ecmascript",
+      "jsx": true,
+      "dynamicImport": true
+    },
+    "target": "es5"
+  },
+  "minify": true,
+  "module": {
+    "type": "commonjs"
+  }
+}
