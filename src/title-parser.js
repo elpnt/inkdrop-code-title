@@ -4,6 +4,10 @@ import visit from "unist-util-visit";
 import split from "split-on-first";
 import { AllHtmlEntities as Entities } from "html-entities";
 
+const entities = new Entities();
+
+const { fontFamily } = inkdrop.config.settings.editor;
+
 //
 // unist-util-visit fucntion parses the below code
 //
@@ -23,9 +27,7 @@ import { AllHtmlEntities as Entities } from "html-entities";
 //   }
 //
 
-const parseTitle = (options) => (tree) => {
-  const entities = new Entities();
-
+const parseTitle = () => (tree) => {
   visit(
     tree,
     (node) => node.type === "code",
@@ -40,11 +42,12 @@ const parseTitle = (options) => (tree) => {
       if (title || title === "") {
         node.lang = lang;
         if (meta) title += " " + meta;
-        if (title === "") return; // if no title, don't render it
+        if (title === "") return; // if no title, don't render title block
+
         title = entities.encode(title);
         const titleNode = {
           type: "html",
-          value: `<span class="code-title">${title}</span>`,
+          value: `<span class="code-title" style="font-family: ${fontFamily};">${title}</span>`,
         };
         parent.children.splice(index, 0, titleNode);
 

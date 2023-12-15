@@ -3,9 +3,9 @@ import React from "react";
 export default function createTitledCodeBlock(OrigCode) {
   const Code = (props) => {
     const { className } = props;
-    const withTitle = className && className.split(" ")[0] === "with-title";
+    const hasTitle = className && className.split(" ")[0] === "with-title";
 
-    return withTitle ? (
+    return hasTitle ? (
       <div className="with-title-block">
         <OrigCode {...props}>{props.children}</OrigCode>
       </div>
