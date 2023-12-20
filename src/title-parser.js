@@ -6,7 +6,9 @@ import { AllHtmlEntities as Entities } from "html-entities";
 
 const entities = new Entities();
 
-const { fontFamily } = inkdrop.config.settings.editor;
+const { fontFamily: defaultFontFamily } = inkdrop.config.defaultSettings.editor;
+const { fontFamily: customFontFamily } = inkdrop.config.settings.editor;
+const fontFamily = customFontFamily || defaultFontFamily;
 
 //
 // unist-util-visit fucntion parses the below code
@@ -47,7 +49,9 @@ const parseTitle = () => (tree) => {
         title = entities.encode(title);
         const titleNode = {
           type: "html",
-          value: `<span class="code-title" style="font-family: ${fontFamily};">${title}</span>`,
+          value: fontFamily
+            ? `<span class="code-title" style="font-family: ${fontFamily};">${title}</span>`
+            : `<span class="code-title">${title}</span>`,
         };
         parent.children.splice(index, 0, titleNode);
 
