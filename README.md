@@ -5,6 +5,8 @@
 
 Add a title to a fenced code block
 
+![code-title sample](./img/sample.png)
+
 ## Install from command line
 
 ```
@@ -13,6 +15,12 @@ ipm install code-title
 
 ## Usage & Example
 
-Type a colon(`:`) and a title after a language tag in a fenced code block as follows.
+Enter a colon(`:`) and title following the language tag of the fenced code block, as follows
 
-![code-title sample](./img/sample.png)
+````
+```js:this is title
+function hello() {
+  console.log('Hello world')
+}
+```
+````
