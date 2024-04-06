@@ -1,13 +1,13 @@
 span.code-title {
   color: var(--dark-text-color);
   background-color: rgba(100, 100, 100, 0.175);
-  position: absolute;
   font-size: 75%;
   border-radius: 3px 0 3px 0; /* 3px is `pre` border radius */
   padding: 0.2rem 0.8rem;
   line-height: 1.6rem;
   margin-bottom: -2.2rem;
-  z-index: 2;
+  display: block;
+  width: fit-content;
 }
 
 div.with-title-block {
