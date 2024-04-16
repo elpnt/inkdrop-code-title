@@ -1,15 +1,27 @@
-"use strict";
-
 import { markdownRenderer } from "inkdrop";
+
 import parseTitle from "./title-parser";
-import createTitledCodeBlock from "./codeblock";
 
 module.exports = {
   activate() {
     markdownRenderer.remarkPlugins.push(parseTitle);
 
-    const OrigCode = markdownRenderer.remarkReactComponents.code;
-    const TitledCode = createTitledCodeBlock(OrigCode);
-    markdownRenderer.remarkReactComponents.code = TitledCode;
+    markdownRenderer.remarkReactComponents.pre = (props) => {
+      const codeClassName = props.className;
+      const hasTitle =
+        codeClassName && codeClassName.split(" ")[0] === "with-title";
+      return hasTitle ? (
+        <div className="with-title-block">
+          <pre {...props} />
+        </div>
+      ) : (
+        <pre {...props} />
+      );
+    };
+  },
+  deactivate() {
+    markdownRenderer.remarkPlugins = markdownRenderer.remarkPlugins.filter(
+      (plugin) => plugin !== parseTitle
+    );
   },
 };
