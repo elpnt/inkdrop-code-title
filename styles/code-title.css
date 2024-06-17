@@ -1,17 +1,17 @@
 .code-title {
-  color: var(--dark-text-color);
-  background-color: var(--strong-transparent-black);
-  border-radius: 3px 3px 0 0; /* 3px is `pre` border radius */
-  font-size: 80%;
-  line-height: 2em;
-  display: grid;
-  align-items: center;
+    color: var(--dark-text-color);
+    background-color: var(--strong-transparent-black);
+    border-radius: 3px 3px 0 0; /* 3px is `pre` border radius */
+    font-size: 80%;
+    padding: 8px 16px;
+    display: grid;
+    align-items: center;
 }
 
 body[class*="dark-ui"] .code-title {
-  background-color: var(--subtle-transparent-black);
+    background-color: var(--subtle-transparent-black);
 }
 
-.with-title-block > pre {
-  border-radius: 0 0 3px 3px !important;
+.code-title + div > pre {
+    border-radius: 0 0 3px 3px !important;
 }
