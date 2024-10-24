@@ -1,7 +1,7 @@
 {
   "name": "code-title",
   "main": "./lib/index",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "Add a title to a fenced code block",
   "keywords": [],
   "repository": "https://github.com/elpnt/inkdrop-code-title",
@@ -11,7 +11,7 @@
     "watch": "swc -w src/ -d lib/"
   },
   "engines": {
-    "inkdrop": "^5.x"
+    "inkdrop": "^5.9.0"
   },
   "dependencies": {
     "html-entities": "^1.3.1",

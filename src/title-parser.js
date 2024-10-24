@@ -1,7 +1,6 @@
 "use strict";
 
 import visit from "unist-util-visit";
-import split from "split-on-first";
 
 const { fontFamily: defaultFontFamily } = inkdrop.config.defaultSettings.editor;
 const { fontFamily: customFontFamily } = inkdrop.config.settings.editor;
@@ -38,17 +37,18 @@ export default function parseTitle() {
   return (tree) => {
     visit(
       tree,
-      (node) => node.type === "code",
+      (node) => node.type === "code" && !node.hasCodeTitle,
       (node, index, parent) => {
-        let [lang, title] = split(node.lang || "", ":");
+        const lang = node.lang;
         const meta = node.meta || "";
+        let title = node.data.hProperties.title;
 
         // preserve mdast-node info in data field
         node.data = node.data || {};
         node.data.hProperties = node.data.hProperties || {};
 
         if (title || title === "") {
-          node.lang = lang;
+          node.hasCodeTitle = true;
           if (meta) title += " " + meta; // Allow for a space in the title
           title = escapeHtml(title);
           if (title === "") title = lang; // If title is empty, fallbak to lang
@@ -59,14 +59,8 @@ export default function parseTitle() {
               ? `<div class="code-title" style="font-family: ${fontFamily};">${title}</div>`
               : `<div class="code-title">${title}</div>`,
           };
-          parent.children.splice(index, 0, titleNode);
 
-          let langClass = "";
-          if (lang) langClass = "language-" + lang;
-          node.data.hProperties.className =
-            node.data.hProperties.className || [];
-          node.data.hProperties.className.push(langClass);
-          node.data.hProperties.className.unshift("with-title");
+          parent.children.splice(index, 0, titleNode);
         }
       }
     );
