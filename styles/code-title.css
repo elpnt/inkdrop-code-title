@@ -1,8 +1,7 @@
 .code-title {
 	color: var(--dark-text-color);
 	background-color: #e5e5e5;
-	border-radius: var(--default-border-radius) var(--default-border-radius) 0px
-		0px;
+	border-radius: 6px 6px 0px 0px;
 	font-size: 80%;
 	padding: 8px 16px;
 	display: grid;
@@ -14,6 +13,6 @@ body[class*="dark-ui"] .code-title {
 	background-color: #404040;
 }
 
-.code-title + div > pre {
-	border-radius: 0 0 var(--default-border-radius) var(--default-border-radius) !important;
+.code-title + .codeblock pre {
+	border-radius: 0px 0px 6px 6px !important;
 }
